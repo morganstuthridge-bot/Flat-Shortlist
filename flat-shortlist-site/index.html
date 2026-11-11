@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#1E6B5A">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Flat Shortlist">
+<title>Flat Shortlist 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+<style>
+:root{
+  --bg:#F6F7F4;--card:#FFFFFF;--fg:#17211F;--fg2:#5E6B68;--rule:#D9DED9;--panel:#ECEFEA;
+  --accent:#1E6B5A;--accent-soft:#E7F0EC;--on-accent:#FFFFFF;--warn:#A3480C;--warn-soft:#F8E8DC;--no:#A32B2B;
+  --font:"Manrope",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#121816;--card:#1A211F;--fg:#EEF2EF;--fg2:#9FADA8;--rule:#2B3431;--panel:#222B28;
+  --accent:#5FC7A9;--accent-soft:#17302A;--on-accent:#0E1715;--warn:#F0A36B;--warn-soft:#3A2416;--no:#F08A8A;color-scheme:dark}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);font-size:15px;line-height:1.45;
+  padding:env(safe-area-inset-top,0) max(12px,env(safe-area-inset-right,0)) calc(40px + env(safe-area-inset-bottom,0)) max(12px,env(safe-area-inset-left,0))}
+.wrap{max-width:1080px;margin:0 auto}
+h1{font-size:24px;font-weight:800;margin:0;letter-spacing:-.01em}
+h2{font-size:17px;font-weight:700;margin:0;text-wrap:balance}
+a{color:var(--accent);text-decoration:none;font-weight:600}
+a:hover{text-decoration:underline}
+button,select,input{font:inherit;color:var(--fg)}
+button{cursor:pointer;border:1px solid var(--rule);background:var(--card);padding:9px 14px;border-radius:8px;min-height:40px}
+button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+button.on{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:700}
+button.primary{background:var(--accent);color:var(--on-accent);border-color:var(--accent);font-weight:700}
+select,input[type=text],input[type=password]{border:1px solid var(--rule);background:var(--card);border-radius:8px;padding:8px 10px;min-height:40px}
+header{padding:18px 0 10px;display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between}
+.sub{color:var(--fg2);font-size:13px}
+.me{display:flex;align-items:center;gap:8px;font-size:14px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:6px 0 10px}
+.stats div{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:8px 10px}
+.stats b{display:block;font-size:20px;font-weight:800;font-variant-numeric:tabular-nums}
+.stats span{font-size:11px;color:var(--fg2);text-transform:uppercase;letter-spacing:.05em}
+.controls{position:sticky;top:0;z-index:5;background:var(--bg);padding:8px 0;display:flex;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;border-bottom:1px solid var(--rule);scrollbar-width:none}
+.controls::-webkit-scrollbar{display:none}
+.controls>*{flex:0 0 auto}
+.chipbtn{border-radius:999px;padding:6px 14px;min-height:36px;font-size:14px;white-space:nowrap}
+.note{margin:12px 0;padding:10px 12px;border-radius:10px;background:var(--panel);font-size:14px}
+.note.warn{background:var(--warn-soft);color:var(--fg)}
+.grid{display:grid;gap:14px;margin-top:14px;grid-template-columns:1fr}
+@media (min-width:760px){.grid{grid-template-columns:1fr 1fr}}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.card.gone{opacity:.55}
+.photos{position:relative;background:var(--panel);aspect-ratio:16/10}
+.strip{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.strip::-webkit-scrollbar{display:none}
+.strip img{flex:0 0 100%;width:100%;height:100%;object-fit:cover;scroll-snap-align:center;display:block}
+.nophoto{height:100%;display:flex;align-items:center;justify-content:center;color:var(--fg2);font-size:13px;text-align:center;padding:16px}
+.score{position:absolute;left:10px;top:10px;background:var(--accent);color:var(--on-accent);font-weight:800;font-size:18px;border-radius:10px;padding:4px 10px;font-variant-numeric:tabular-nums}
+.badge{position:absolute;right:10px;top:10px;background:var(--card);color:var(--fg);font-weight:700;font-size:11px;border-radius:999px;padding:4px 10px;text-transform:uppercase;letter-spacing:.05em}
+.count{position:absolute;right:10px;bottom:10px;background:rgba(0,0,0,.6);color:#fff;font-size:12px;border-radius:999px;padding:2px 8px}
+.arrow{position:absolute;top:50%;transform:translateY(-50%);width:34px;height:34px;min-height:0;padding:0;border-radius:50%;border:0;background:rgba(0,0,0,.45);color:#fff;font-size:18px;line-height:1;display:none}
+.arrow.l{left:8px}.arrow.r{right:8px}
+@media (hover:hover){.photos:hover .arrow{display:block}}
+.body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:8px}
+.top{display:flex;gap:8px 12px;justify-content:space-between;align-items:baseline;flex-wrap:wrap}
+.rent{font-weight:800;font-size:18px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.rent small{font-weight:500;color:var(--fg2);font-size:12px}
+.meta{color:var(--fg2);font-size:13px}
+.facts{display:flex;flex-wrap:wrap;gap:6px}
+.facts span{background:var(--panel);border-radius:6px;padding:3px 8px;font-size:13px}
+.drive{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px;font-variant-numeric:tabular-nums}
+.drive i{font-style:normal;color:var(--fg2)}
+.drive .over{color:var(--warn);font-weight:700}
+.flags{display:flex;flex-wrap:wrap;gap:6px}
+.flag{background:var(--warn-soft);color:var(--warn);font-size:12px;font-weight:700;padding:3px 8px;border-radius:6px}
+.flag.soft{background:var(--panel);color:var(--fg2);font-weight:600}
+details.more{font-size:14px}
+details.more summary{cursor:pointer;color:var(--fg2);font-size:13px;padding:4px 0}
+.breakdown{display:grid;grid-template-columns:repeat(auto-fill,minmax(105px,1fr));gap:2px 10px;font-size:12px;color:var(--fg2);margin-top:6px;font-variant-numeric:tabular-nums}
+.breakdown b{color:var(--fg)}
+.links{display:flex;gap:14px;flex-wrap:wrap;font-size:14px}
+.tally{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.tally div{border:1px solid var(--rule);border-radius:8px;padding:5px 8px;font-size:12px;color:var(--fg2)}
+.tally b{display:block;font-size:14px;color:var(--fg)}
+.tally .yes b{color:var(--accent)}.tally .no b{color:var(--no)}
+.votebtns{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.votebtns button{padding:8px 4px;font-weight:600}
+.votebtns button.on.no{background:var(--no);border-color:var(--no);color:#fff}
+.comments{font-size:14px;display:flex;flex-direction:column;gap:4px}
+.comment{border-top:1px solid var(--rule);padding-top:5px}
+.comment time{color:var(--fg2);font-size:11px;margin-left:6px}
+.cform{display:flex;gap:6px}
+.cform input{flex:1;min-width:0}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:flex-end;justify-content:center;z-index:20;padding:12px}
+@media (min-width:600px){.overlay{align-items:center}}
+.sheet{background:var(--card);border-radius:16px;padding:18px;width:100%;max-width:420px;display:flex;flex-direction:column;gap:12px}
+.sheet .names{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.sheet input{width:100%}
+.err{color:var(--no);font-size:13px;min-height:18px}
+.empty{padding:40px 0;color:var(--fg2);text-align:center}
+footer{margin-top:28px;font-size:12px;color:var(--fg2)}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div>
+    <h1>Flat Shortlist 2027</h1>
+    <div class="sub" id="subline">Loading listings…</div>
+  </div>
+  <div class="me"><span class="sub" id="whoami"></span><button id="signin" class="chipbtn">Choose your name</button></div>
+</header>
+
+<div class="stats">
+  <div><b id="s-active">–</b><span>Listings</span></div>
+  <div><b id="s-new">–</b><span>New for you</span></div>
+  <div><b id="s-agreed">–</b><span>All yes</span></div>
+  <div><b id="s-todo">–</b><span>Your vote due</span></div>
+</div>
+
+<div class="controls" id="controls">
+  <select id="sort" aria-label="Sort">
+    <option value="score">Best score</option><option value="new">Newest</option><option value="rent">Cheapest</option><option value="avail">Available date</option>
+  </select>
+  <button class="chipbtn" data-f="todo">Not voted by me</button>
+  <button class="chipbtn" data-f="twobath">2 bathrooms</button>
+  <button class="chipbtn" data-f="house">Houses</button>
+  <button class="chipbtn" data-f="garage">Garage</button>
+  <button class="chipbtn" data-f="photos">Has photos</button>
+  <button class="chipbtn" data-f="hideno">Hide any No</button>
+  <button class="chipbtn" data-f="liked">Liked by someone</button>
+  <button class="chipbtn" data-f="gone">Show gone</button>
+</div>
+
+<div id="notice" class="note" hidden></div>
+<div id="grid" class="grid"></div>
+<div id="empty" class="empty" hidden></div>
+
+<details class="more" style="margin-top:24px">
+  <summary>How the scoring works</summary>
+  <p>Trade Me and realestate.co.nz are scanned for Christchurch rentals. A listing is dropped if rent is over $700, it has fewer than 2 bedrooms, it is on a major road, it is available before 1 December, or the drive is too long (target 30 minutes for Mel and Roisin, 40 for Morgan, with 5 minutes of tolerance).</p>
+  <p>The rest are scored out of 100 on rent, a second bathroom (one-bathroom places lose 18 points), dwelling type, garage, storage, off-street parking, quiet street, how modern it reads, heating and glazing, sun and outdoor space, drive time, suburb and extras. Orange flags are things to check before a viewing. Drive times are estimates to within about five minutes.</p>
+</details>
+<footer>Morgan, Mel and Roisin's flat hunt. Photos and listing details belong to the listing sites; tap through for the full listing.</footer>
+</div>
+
+<div class="overlay" id="overlay" hidden>
+  <form class="sheet" id="signform">
+    <h2>Who are you?</h2>
+    <div class="names" id="names"></div>
+    <label class="sub" for="pass">Flat passcode (ask Morgan). Needed once on this device to vote or comment.</label>
+    <input type="password" id="pass" autocomplete="current-password" placeholder="Passcode">
+    <div class="err" id="signerr"></div>
+    <div style="display:flex;gap:8px;justify-content:flex-end"><button type="button" id="cancel">Cancel</button><button type="submit" class="primary">Save</button></div>
+  </form>
+</div>
+
+<script src="config.js"></script>
+<script>
+(function(){
+  const C=window.FLAT_CONFIG||{}, NAMES=C.NAMES||['Morgan','Mel','Roisin'];
+  const SB=(C.SUPABASE_URL||'').replace(/\/$/,''), KEY=C.SUPABASE_ANON_KEY||'', LIVE=!!(SB&&KEY);
+  const $=s=>document.querySelector(s), grid=$('#grid');
+  const store={get(k,d){try{const v=localStorage.getItem(k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+  let me=store.get('fs_me',null), pass=store.get('fs_pass',''), lastVisit=store.get('fs_last',0);
+  let data=null, votes={}, comments={}, filters=new Set(store.get('fs_filters',[])), pendingName=me;
+  const LABEL={hornby:'Morgan',hospital:'Mel',kaiapoi:'Roisin'}, LIMIT={hornby:40,hospital:30,kaiapoi:30};
+  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const fmtDate=s=>{if(!s)return 'not stated';const d=new Date(s+'T00:00:00');return isNaN(d)?s:d.toLocaleDateString('en-NZ',{day:'numeric',month:'short'})};
+
+  // ---------- data ----------
+  async function loadListings(){
+    try{
+      const r=await fetch('listings.json?'+Date.now(),{cache:'no-store'}); if(!r.ok) throw new Error(r.status);
+      data=await r.json(); render();
+    }catch(e){ note('Could not load the listings file. Check that listings.json is uploaded next to index.html.',true); }
+  }
+  async function sb(path,opts={}){
+    const r=await fetch(SB+'/rest/v1/'+path,{...opts,headers:{apikey:KEY,Authorization:'Bearer '+KEY,'Content-Type':'application/json',...(opts.headers||{})}});
+    if(!r.ok) throw new Error('Supabase '+r.status);
+    return r.status===204?null:r.json();
+  }
+  async function loadVotes(){
+    if(!LIVE){ votes=store.get('fs_localvotes',{}); comments=store.get('fs_localcomments',{}); return render(); }
+    try{
+      const [v,c]=await Promise.all([sb('votes?select=listing_id,name,vote'),sb('comments?select=listing_id,name,body,created_at&order=created_at.asc')]);
+      const sig=JSON.stringify([v,c]); if(sig===loadVotes.sig) return; loadVotes.sig=sig;
+      votes={}; v.forEach(x=>{(votes[x.listing_id]||(votes[x.listing_id]={}))[x.name]=x.vote});
+      comments={}; c.forEach(x=>{(comments[x.listing_id]||(comments[x.listing_id]=[])).push(x)});
+      render(true);
+    }catch(e){ note('Votes could not be loaded just now. Listings still work; votes will retry.',true); }
+  }
+  async function castVote(id,val){
+    if(!me){ openSign(); return; }
+    const cur=(votes[id]||{})[me], next=cur===val?'':val;
+    (votes[id]||(votes[id]={}))[me]=next||undefined; if(!next) delete votes[id][me]; render(true);
+    if(!LIVE){ store.set('fs_localvotes',votes); return; }
+    try{
+      const res=await sb('rpc/cast_vote',{method:'POST',body:JSON.stringify({p_pass:pass,p_listing:id,p_name:me,p_vote:next})});
+      if(res==='bad_passcode'){ pass=''; store.set('fs_pass',''); openSign('That passcode was not accepted. Try again.'); loadVotes(); }
+      else if(res!=='ok'){ note('Vote not saved ('+res+').',true); loadVotes(); }
+    }catch(e){ note('Vote not saved, check your connection.',true); loadVotes(); }
+  }
+  async function addComment(id,text){
+    if(!me){ openSign(); return false; }
+    const row={listing_id:id,name:me,body:text,created_at:new Date().toISOString()};
+    if(!LIVE){ (comments[id]||(comments[id]=[])).push(row); store.set('fs_localcomments',comments); render(true); return true; }
+    try{
+      const res=await sb('rpc/add_comment',{method:'POST',body:JSON.stringify({p_pass:pass,p_listing:id,p_name:me,p_body:text})});
+      if(res==='ok'){ (comments[id]||(comments[id]=[])).push(row); render(true); return true; }
+      if(res==='bad_passcode'){ pass=''; store.set('fs_pass',''); openSign('That passcode was not accepted. Try again.'); }
+      else note('Comment not saved ('+res+').',true);
+    }catch(e){ note('Comment not saved, check your connection.',true); }
+    return false;
+  }
+
+  // ---------- sign in ----------
+  function openSign(msg){
+    pendingName=me; $('#signerr').textContent=msg||''; $('#pass').value=pass||'';
+    $('#names').innerHTML=NAMES.map(n=>`<button type="button" data-n="${esc(n)}" class="${n===pendingName?'on':''}">${esc(n)}</button>`).join('');
+    $('#names').querySelectorAll('button').forEach(b=>b.onclick=()=>{pendingName=b.dataset.n;$('#names').querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b))});
+    $('#pass').parentElement.querySelector('label').hidden=!LIVE; $('#pass').hidden=!LIVE;
+    $('#overlay').hidden=false;
+  }
+  $('#signin').onclick=()=>openSign();
+  $('#cancel').onclick=()=>{$('#overlay').hidden=true};
+  $('#overlay').addEventListener('click',e=>{if(e.target.id==='overlay')$('#overlay').hidden=true});
+  $('#signform').addEventListener('submit',e=>{
+    e.preventDefault();
+    if(!pendingName){$('#signerr').textContent='Pick your name.';return}
+    if(LIVE&&!$('#pass').value.trim()){$('#signerr').textContent='Enter the passcode.';return}
+    me=pendingName; pass=$('#pass').value.trim(); store.set('fs_me',me); store.set('fs_pass',pass); $('#overlay').hidden=true; render();
+  });
+
+  // ---------- render ----------
+  function note(t,warn){const n=$('#notice');n.textContent=t;n.className='note'+(warn?' warn':'');n.hidden=false;clearTimeout(note.t);note.t=setTimeout(()=>{n.hidden=true},8000)}
+  document.querySelectorAll('[data-f]').forEach(b=>{
+    b.classList.toggle('on',filters.has(b.dataset.f));
+    b.onclick=()=>{const f=b.dataset.f;filters.has(f)?filters.delete(f):filters.add(f);b.classList.toggle('on',filters.has(f));store.set('fs_filters',[...filters]);render()};
+  });
+  $('#sort').value=store.get('fs_sort','score'); $('#sort').onchange=()=>{store.set('fs_sort',$('#sort').value);render()};
+
+  function render(keepScroll){
+    if(!data) return;
+    const all=data.listings||[], act=all.filter(l=>l.status!=='gone');
+    const v=id=>votes[id]||{};
+    $('#subline').textContent=`${act.length} places on the list · last scan ${new Date(data.generated).toLocaleDateString('en-NZ',{weekday:'short',day:'numeric',month:'short'})}`;
+    $('#whoami').textContent=me?('You are '+me):''; $('#signin').textContent=me?'Change':'Choose your name';
+    $('#s-active').textContent=act.length;
+    $('#s-new').textContent=act.filter(l=>Date.parse(l.first_seen||0)>lastVisit).length;
+    $('#s-agreed').textContent=act.filter(l=>NAMES.every(n=>v(l.id)[n]==='yes')).length;
+    $('#s-todo').textContent=me?act.filter(l=>!v(l.id)[me]).length:'–';
+    let rows=filters.has('gone')?all.slice():act.slice();
+    if(filters.has('todo')&&me) rows=rows.filter(l=>!v(l.id)[me]);
+    if(filters.has('twobath')) rows=rows.filter(l=>(l.bathrooms||0)>=2);
+    if(filters.has('house')) rows=rows.filter(l=>/^house/.test(l.dwelling||''));
+    if(filters.has('garage')) rows=rows.filter(l=>/garage/.test(l.garage||''));
+    if(filters.has('photos')) rows=rows.filter(l=>(l.photos||[]).length);
+    if(filters.has('hideno')) rows=rows.filter(l=>!NAMES.some(n=>v(l.id)[n]==='no'));
+    if(filters.has('liked')) rows=rows.filter(l=>NAMES.some(n=>v(l.id)[n]==='yes'));
+    const s=$('#sort').value;
+    rows.sort((a,b)=>s==='rent'?(a.rent||0)-(b.rent||0):s==='new'?String(b.first_seen||'').localeCompare(String(a.first_seen||''))||b.score-a.score:s==='avail'?String(a.available_parsed||'9').localeCompare(String(b.available_parsed||'9')):(b.score||0)-(a.score||0));
+    // keep typed comment drafts across re-renders
+    const drafts={}; grid.querySelectorAll('.cform input').forEach(i=>{if(i.value)drafts[i.dataset.id]=i.value});
+    const focusId=document.activeElement&&document.activeElement.dataset?document.activeElement.dataset.id:null, wasInput=document.activeElement&&document.activeElement.tagName==='INPUT';
+    const pos={}; grid.querySelectorAll('.strip').forEach(st=>{pos[st.dataset.id]=st.scrollLeft});
+    grid.innerHTML=rows.map(card).join('');
+    $('#empty').hidden=rows.length>0; $('#empty').textContent=rows.length?'':'Nothing matches these filters.';
+    grid.querySelectorAll('.strip').forEach(st=>{if(pos[st.dataset.id])st.scrollLeft=pos[st.dataset.id];st.addEventListener('scroll',()=>{const c=st.parentElement.querySelector('.count');if(c)c.textContent=(Math.round(st.scrollLeft/st.clientWidth)+1)+' / '+st.children.length},{passive:true})});
+    grid.querySelectorAll('.arrow').forEach(a=>a.onclick=()=>{const st=a.parentElement.querySelector('.strip');st.scrollBy({left:(a.classList.contains('r')?1:-1)*st.clientWidth,behavior:'smooth'})});
+    grid.querySelectorAll('img').forEach(im=>im.addEventListener('error',()=>{const st=im.parentElement;im.remove();if(st&&!st.children.length){st.parentElement.querySelectorAll('.count,.arrow').forEach(x=>x.remove());st.outerHTML='<div class="nophoto">Photos would not load. Open the listing to see them.</div>'}}));
+    grid.querySelectorAll('[data-vote]').forEach(b=>b.onclick=()=>castVote(b.dataset.id,b.dataset.vote));
+    grid.querySelectorAll('.cform').forEach(f=>{const i=f.querySelector('input');if(drafts[i.dataset.id])i.value=drafts[i.dataset.id];if(wasInput&&focusId===i.dataset.id)i.focus();
+      f.addEventListener('submit',async e=>{e.preventDefault();const t=i.value.trim();if(!t)return;i.value='';const ok=await addComment(i.dataset.id,t);if(!ok)i.value=t})});
+  }
+
+  function card(l){
+    const v=votes[l.id]||{}, cs=comments[l.id]||[], ph=l.photos||[], isNew=Date.parse(l.first_seen||0)>lastVisit;
+    const photos=ph.length?`<div class="strip" data-id="${esc(l.id)}">${ph.map((u,i)=>`<img src="${esc(u)}" alt="Photo ${i+1} of ${esc(l.address||'listing')}" loading="lazy" decoding="async" referrerpolicy="no-referrer">`).join('')}</div>${ph.length>1?`<span class="count">1 / ${ph.length}</span><button class="arrow l" aria-label="Previous photo">‹</button><button class="arrow r" aria-label="Next photo">›</button>`:''}`
+      :`<div class="nophoto">No photos read for this one yet. Open the listing to see them.</div>`;
+    const facts=[`${l.bedrooms??'?'} bed`,`${l.bathrooms??'?'} bath`,l.dwelling&&l.dwelling!=='unknown'?l.dwelling:'',l.garage&&l.garage!=='none stated'?l.garage:'',l.offstreet?l.offstreet+' off-street':'',`from ${fmtDate(l.available_parsed)}`].filter(Boolean).map(x=>`<span>${esc(x)}</span>`).join('');
+    const drive=l.drive&&Object.keys(l.drive).length?`<div class="drive">${Object.entries(l.drive).map(([k,m])=>`<span class="${m>(LIMIT[k]||30)?'over':''}"><i>${LABEL[k]||k}</i> ${Math.round(m)} min</span>`).join('')}</div>`:'';
+    const flags=(l.flags||[]).map(f=>`<span class="flag${/check|confirm|ask|not read|not stated|not in|not tiered/i.test(f)?' soft':''}">${esc(f)}</span>`).join('');
+    const tally=NAMES.map(n=>`<div class="${v[n]||''}">${esc(n)}<b>${v[n]?({yes:'Yes',maybe:'Maybe',no:'No'})[v[n]]:'–'}</b></div>`).join('');
+    const btns=['yes','maybe','no'].map(x=>`<button data-id="${esc(l.id)}" data-vote="${x}" class="${me&&v[me]===x?'on '+x:''}">${x==='yes'?'Yes':x==='maybe'?'Maybe':'No'}</button>`).join('');
+    const bd=l.breakdown?`<div class="breakdown">${Object.entries(l.breakdown).map(([k,x])=>`<span>${esc(k.replace('_',' '))} <b>${x}</b></span>`).join('')}</div>`:'';
+    const tm=/trademe/.test(l.url||'');
+    return `<article class="card ${l.status==='gone'?'gone':''}">
+      <div class="photos">${photos}<span class="score">${l.score??'–'}</span>${l.status==='gone'?'<span class="badge">Gone</span>':isNew?'<span class="badge">New</span>':''}</div>
+      <div class="body">
+        <div class="top"><h2>${esc(l.address||'Address not shown')}</h2><div class="rent">$${l.rent??'?'}<small>/wk${l.rent_per_room?' · $'+l.rent_per_room+' a room':''}</small></div></div>
+        <div class="facts">${facts}</div>
+        ${drive}
+        ${flags?`<div class="flags">${flags}</div>`:''}
+        ${(l.summary||bd)?`<details class="more"><summary>Description and score breakdown</summary>${l.summary?`<div>${esc(l.summary)}</div>`:''}${bd}${l.agency?`<div class="meta" style="margin-top:6px">${esc(l.agency)}</div>`:''}</details>`:''}
+        <div class="links"><a href="${esc(l.url)}" target="_blank" rel="noopener noreferrer">${tm?'Open on Trade Me':'Open on realestate.co.nz'} ↗</a>${l.url_alt?`<a href="${esc(l.url_alt)}" target="_blank" rel="noopener noreferrer">realestate.co.nz ↗</a>`:''}<a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent((l.address||'')+', Christchurch, New Zealand')}" target="_blank" rel="noopener noreferrer">Map ↗</a></div>
+        <div class="tally">${tally}</div>
+        <div class="votebtns">${btns}</div>
+        <div class="comments">${cs.map(c=>`<div class="comment"><b>${esc(c.name)}</b> ${esc(c.body)}<time>${c.created_at?new Date(c.created_at).toLocaleDateString('en-NZ',{day:'numeric',month:'short'}):''}</time></div>`).join('')}
+          <form class="cform"><input type="text" data-id="${esc(l.id)}" maxlength="500" placeholder="${me?'Comment as '+esc(me):'Add a comment'}" aria-label="Comment"><button type="submit">Post</button></form></div>
+      </div></article>`;
+  }
+
+  // ---------- go ----------
+  if(!LIVE) note('Voting is not connected yet, so votes and comments stay on this device only. Add the Supabase details to config.js to share them.');
+  loadListings().then(loadVotes);
+  setInterval(()=>{ if(!document.hidden&&LIVE&&$('#overlay').hidden) loadVotes(); },25000);
+  document.addEventListener('visibilitychange',()=>{ if(!document.hidden){ if(LIVE)loadVotes(); } else store.set('fs_last',Date.now()); });
+  window.addEventListener('pagehide',()=>store.set('fs_last',Date.now()));
+})();
+</script>
+</body>
+</html>
